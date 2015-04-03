@@ -19,5 +19,11 @@
     "org.apache.cordova.console",
     "com.ionic.keyboard"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    {
+      "platform": "android",
+      "version": "3.6.4",
+      "locator": "android"
+    }
+  ]
 }

@@ -2,3 +2,8 @@
 www/lib/*
 www/lib
 www/lib/**/*
+platforms/android/ant-build/res/drawable-ldpi/icon.png
+platforms
+www/lib/
+www/lib
+www/lib/**/*
