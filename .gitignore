@@ -7,3 +7,5 @@ platforms
 www/lib/
 www/lib
 www/lib/**/*
+node_modules
+sh.exe.stackdump

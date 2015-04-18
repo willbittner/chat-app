@@ -1,11 +1,33 @@
-<ion-view view-title="Login">
-  <ion-content>
-    <ion-list>
-    <ion-toggle >
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+<ion-view view-title="Login" layout-fillS >
+<md-content  class="md-padding" layout="column" layout-sm="column" layout-align="center center " >
+<div class="md-padding" > </div>
+<div class="md-padding" > </div>
 
 
+	<md-card  >
+
+		<md-toolbar ng-class="alertBarClass" > 
+
+			<div class="md-toolbar-tools" ng-show="!user.badPassword"> Please Login </div>
+			<div class="md-toolbar-tools " ng-class="md-warn" ng-show="user.badPassword"> Bad Username or Password</div>
+		</md-toolbar>
+		
+	
+		<md-card-content  layout="column" layout-align="center center">
+			<md-input-container>
+			<label>Username</label>
+			<input ng-model="user.username">
+			</md-input-container>
+			<md-input-container>
+			<label>Password</label>
+			<input ng-model="user.password" type="password">
+			</md-input-container>
+			<md-button name="big-button" class="md-raised md-accent" ng-click="checkPassword()">Login</md-button>
+		</md-card-content>
+	</md-card>
+
+
+
+
+</md-content>
 </ion-view>

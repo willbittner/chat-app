@@ -1,1 +1,14 @@
 /* Empty. Add your own CSS if you like */
+.msg-button  {
+   top: auto;
+      right: 10rem;
+      bottom: 100px;
+      left: auto;
+      position: absolute; 
+      height: 54px;
+      width: 54px;
+      z-index: 20;
+	
+
+
+}
