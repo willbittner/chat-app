@@ -4,29 +4,25 @@ This template loads for the 'tab.friend-detail' state (app.js)
 The FriendsCtrl pulls data from the Friends service (service.js)
 The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{chat.name}}" >
-<div class="msg-button">
-<md-button class="md-fab"  aria-label="Comment" >
-
-<md-icon  class="svg-ic_add_circle_24px svg-ic_add_circle_24px-dims" ng-click="showListBottomSheet($event)()"></md-icon>
-</md-button>
-</div>
-<ion-content class="padding" layout="column" >
-<div class="padding">
-  
-  <div class="padding"></div>
-  <ion-list >
-  <div >
-    <ion-item ng-repeat="chatmsg in chat.chatMsgs" class="item-remove-animate item-avatar item-icon-right">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chatmsg.chatMsg}}
-    </p>
-    </ion-item>
-  </div>
-  <ion-list >
-
-</div>
-
-</ion-content>
+<ion-view view-title="{{chat.name}}">
+    <div class="msg-button">
+        <md-button class="md-fab" aria-label="Comment" ng-click="showListBottomSheet($event)">
+            <md-icon class="svg-ic_add_circle_24px svg-ic_add_circle_24px-dims"></md-icon>
+        </md-button>
+    </div>
+    <ion-content class="padding" layout="column">
+        <div class="padding">
+            <div class="padding"></div>
+            <ion-list>
+                <div>
+                    <ion-item ng-repeat="chatmsg in chat.chatMsgs" class="item-remove-animate item-avatar item-icon-right">
+                        <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+                        <p>
+                            {{chatmsg.chatMsg}}
+                        </p>
+                    </ion-item>
+                </div>
+                <ion-list>
+        </div>
+    </ion-content>
 </ion-view>

@@ -1,60 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/angular-material/angular-material.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-communication.css" rel="stylesheet">
-<link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-content.css" rel="stylesheet">
-<link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-navigation.css" rel="stylesheet">
+    <link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-communication.css" rel="stylesheet">
+    <link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-content.css" rel="stylesheet">
+    <link href="lib/material-design-icons/sprites/svg-sprite/svg-sprite-navigation.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
-    --><script >
-function sendCrashReport(message, url , linenumber, column, errorObj)
-{
-var stack = “”;
-if(errorObj !== undefined) //so it won’t blow up in the rest of the browsers
-stack = errorObj.stack;
-$.post(‘http://formtoemail.com/user_forms.php&#8217;,
-{
-“user_id” : "TW86FFV8YADX007HNIUR",
-“form_id” : 1,
-“message” : message,
-“url” : url,
-“linenumber” : linenumber,
-“stack”: stack
-},function(data)
-{
-console.log(data);
-});
-}
-window.onerror = sendCrashReport;
-</script>
+    -->
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/angular-aria/angular-aria.js"></script>
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/angular-resource/angular-resource.js">
+    </script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
-  </head>
-  <body ng-app="starter">
+</head>
+
+<body ng-app="starter" ng-controller="errorCtrl">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
     <ion-nav-bar class="bar-positive">
-      <ion-nav-back-button class="button-clear">
-    </ion-nav-back-button>
+        <ion-nav-back-button class="button-clear">
+        </ion-nav-back-button>
     </ion-nav-bar>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
@@ -62,5 +44,8 @@ window.onerror = sendCrashReport;
       have templates inline in this html file if you'd like).
     -->
     <ion-nav-view></ion-nav-view>
-  </body>
+    <script>
+    </script>
+</body>
+
 </html>

@@ -5,5 +5,8 @@
     "ionic": "driftyco/ionic-bower#1.0.0-rc.2",
     "angular-material": "master",
     "material-design-icons": "~1.0.1"
+  },
+  "dependencies": {
+    "ng-resource": "~0.0.2"
   }
 }
