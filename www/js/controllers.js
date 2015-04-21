@@ -36,19 +36,15 @@ angular.module('starter.controllers', [])
             Chats.remove(chat);
         };
     })
-    .controller('ChatDetailCtrl', function ($scope, $stateParams, $mdBottomSheet, Chats) {
+    .controller('ChatDetailCtrl', function ($scope, $stateParams, $mdBottomSheet, Chats, ChatFactory, ChatService) {
         $scope.chat = Chats.get($stateParams.chatId);
         $scope.chat.newChatMsg = '';
-        var newMsg = function () {
-            return {
-                msg: $scope.chat.newChatMsg
-            };
-        };
         $scope.sendMsg = function (msga) {
             console.log("Msg to be sent: " + msga);
-            var amsg = Chats.create($stateParams.chatId, msga);
-            Chats.add($stateParams.chatId, amsg);
-            console.log("sent chat msg: " + amsg);
+            //var amsg = Chats.create($stateParams.chatId, msga);
+            ChatFactory.send(msga, $stateParams.chatId);
+            //Chats.add($stateParams.chatId, amsg);
+            console.log("sent chat msg: " + msga);
         };
         $scope.showListBottomSheet = function ($event) {
             $scope.alert = '';
@@ -56,7 +52,6 @@ angular.module('starter.controllers', [])
                     templateUrl: 'templates/bottomSendMsg.html',
                     controller: 'bottomBoxController',
                     // targetEvent: $event
-
                 })
                 .then(function (clickedItem) {
                     $scope.newChatMsg = clickedItem;
@@ -70,7 +65,7 @@ angular.module('starter.controllers', [])
         $scope.boxMsg = function (msg) {
             console.log("msg" + msg);
             $mdBottomSheet.hide(msg);
-        }
+        };
         return;
     })
     .controller('AccountCtrl', function ($scope) {
